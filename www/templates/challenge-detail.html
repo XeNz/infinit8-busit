@@ -1,0 +1,39 @@
+<!--
+  This template loads for the 'tab.friend-detail' state (app.js)
+  'friend' is a $scope variable created in the FriendsCtrl controller (controllers.js)
+  The FriendsCtrl pulls data from the Friends service (service.js)
+  The Friends service returns an array of friend data
+-->
+
+<ion-view view-title="{{challenge.name}} Challenge">
+  <ion-content class="padding">
+  <div id="top">
+    <a  style ="float:right;"  class="item item-avatar" href="#">
+      <img style ="float:right;" src="{{challenge.image}}">
+    </a>
+    <p>
+      {{challenge.name}}
+    </p>
+    <p>
+      {{challenge.description}}
+    </p>
+      Reward : {{challenge.rewardDescription}}
+    </p>
+    <p>
+      {{challenge.instructions}}
+    </p>
+  </div>
+  <div id="bottom">
+    <a class="item text-center" ui-sref='tab.acceptchallenge'>
+      <button class="button continueButton text-center" style="color: #fff; text-transform: uppercase;">
+      Accept challenge
+      </button>
+    </a>
+    <ion-content ng-controller="MapCtrl">
+          <div id="map" data-tap-disabled="true"></div>
+    </ion-content>
+  </div>
+
+
+  </ion-content>
+</ion-view>

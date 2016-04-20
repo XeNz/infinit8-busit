@@ -61,25 +61,33 @@ angular.module('starter', ['ionic', 'starter.controllers', 'starter.services',])
   })
 
     //3
-    .state('tab.challenges', {
-    url: '/challenges/:categoryid',
-    views: {
-      'tab-challenges': {
-        templateUrl: 'templates/tab-challenges.html',
-        controller: 'ChallengesCtrl'
+      .state('tab.challengetypes', {
+      url: '/challengetypes',
+      views: {
+        'tab-challengetypes': {
+          templateUrl: 'templates/tab-challengetypes.html',
+          controller: 'ChallengetypesCtrl'
+        }
       }
-    }
-  })
-    //3
-    .state('tab.category', {
-    url: '/category',
-    views: {
-      'tab-category': {
-        templateUrl: 'templates/tab-category.html',
-        controller: 'CategoryCtrl'
+    })
+      .state('tab.challenges', {
+      url: '/challenges',
+      views: {
+        'tab-challenges': {
+          templateUrl: 'templates/tab-challenges.html',
+          controller: 'ChallengeCtrl'
+        }
       }
-    }
-  })
+    })
+    .state('tab.challenge-detail', {
+      url: '/challenges/:challengeId',
+      views: {
+        'tab-challenges': {
+          templateUrl: 'templates/challenge-detail.html',
+          controller: 'ChallengeDetailCtrl'
+        }
+      }
+    })
 
 
 
