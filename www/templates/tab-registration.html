@@ -4,59 +4,61 @@
       <h1 class="title">Welcome to challenge app</h1>
     </div> -->
     <div class="row">
-        <div id="appregistrationText" class=" list center" style='width: 450px; background-color: #fff;' >
-              <h4> Who are you?</h4>
+
+        <div id="appregistrationText" class=" list center" style='width: 450px; background-color:  rgb(180,30,25);' >
+                  <h4 class="text-center" style="color: #fff;" > Who are you?</h4>
                 <form>
-                  <label class="item item-input item-stacked-label">
+                
+                  <label class="item item-input item-stacked-label" style='background-color: #fff;'>
                     <span class="input-label">Username</span>
-                    <input type="text" placeholder="Username">
+                    <input type="text" placeholder="Enter your username">
                   </label>
 
-                  <label class="item item-input item-select">
+                  <label class="item item-input item-select" style='background-color: #fff;'>
                     <div class="input-label">
                       Visiting from
                     </div>
-                    <select>
+                    <select required>
+                      <option value="" disabled selected hidden>Please choose a country</option>
                       <option>Netherlands</option>
-                      <option selected>France</option>
+                      <option>France</option>
                       <option>United Kingdom</option>
                       <option>Japan</option>
                       <option>United States of America</option>
                     </select>
                   </label>
 
-                  <label class="item item-input item-select">
+                  <label class="item item-input item-select" style='background-color: #fff;'>
                     <div class="input-label">
                       Age
                     </div>
                     <select>
+                      <option value="" disabled selected hidden>Please choose your age category</option>
                       <option>Below 18</option>
                       <option>18-26</option>
                       <option>26+</option>
                     </select>
                   </label>
 
-                  <div class="list">
-                     <label class="item item-radio">
-                        <input type="radio" name="male">
-                        <div class="item-content">
-                           Male
-                        </div>
-                        <i class="radio-icon ion-checkmark"></i>
-                     </label>
 
-                     <label class="item item-radio">
-                        <input type="radio" name="female">
-                        <div class="item-content">
-                           Female
-                        </div>
-                        <i class="radio-icon ion-checkmark"></i>
-                     </label>
-                  </div>
-                    <button class="button button-assertive">
+                  <label class="item item-input item-select" style='background-color: #fff;'>
+                    <div class="input-label">
+                      Gender
+                    </div>
+                    <select>
+                      <option value="" disabled selected hidden>Please choose your gender </option>
+                      <option>Male</option>
+                      <option>Female</option>
+                    </select>
+                  </label>
+
+
+                    <a class="item text-center" ui-sref='tab.challenges'><button class="button continueButton text-center">
                       Pick your challenge!
-                    </button>   
+                    </button></a>
                     </form>      
+
+
        </div>
     </div>
   </ion-content>

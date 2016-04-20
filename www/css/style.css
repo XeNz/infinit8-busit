@@ -19,11 +19,25 @@ background-color: rgb(180,30,25) !important;
 }
 #appregistrationText{
 	margin-top:80px;
-}
-.item{
-		background-color: #fff;
+	background-color: #fff;	
 }
 .center {
     margin-left: auto;
     margin-right: auto;
+}
+.item{
+	margin: 0px;
+	border-style: none;
+}
+.item-radio input:checked + .radio-content .radio-icon{
+	color: rgb(180,30,25);
+}
+.continueButton{
+	background-color: #ff8100;
+	text-align: center;
+}
+#categoryButtons{
+	 background-color: #ff8100;
+	 width: 450px;
+	 text-transform: uppercase;
 }
