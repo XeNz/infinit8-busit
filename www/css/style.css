@@ -1,1 +1,18 @@
 /* Empty. Add your own CSS if you like */
+.background, .background .pane, .background .item, .background .item-complex .item-content  {
+    background-color: rgb(207,0,57) ;
+
+}
+.tabs-positive > .tabs{
+background-color: rgb(207,0,57) !important;
+}
+.tabs{
+	background-color: rgb(207,0,57) !important;
+}
+.icon, .tab-title{
+	
+	color: #fff;
+}
+#appstartText{
+	padding-top: 80px;
+}
