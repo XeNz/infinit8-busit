@@ -15,5 +15,15 @@ background-color: rgb(180,30,25) !important;
 	color: #fff;
 }
 #appstartText{
-	padding-top: 80px;
+	margin-top: 80px;
+}
+#appregistrationText{
+	margin-top:80px;
+}
+.item{
+		background-color: #fff;
+}
+.center {
+    margin-left: auto;
+    margin-right: auto;
 }
