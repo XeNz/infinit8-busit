@@ -36,8 +36,55 @@ background-color: rgb(180,30,25) !important;
 	background-color: #ff8100;
 	text-align: center;
 }
-#categoryButtons{
-	 background-color: #ff8100;
-	 width: 450px;
-	 text-transform: uppercase;
+#drinkingButton{
+    background-color: #ff8100;
+    text-transform: uppercase;
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 2px;
+}
+#eatingButton{
+    background-color: #ff8100;
+    text-transform: uppercase;
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+    margin-bottom: 2px;
+}
+#shoppingButton{
+    background-color: #ff8100;
+    text-transform: uppercase;
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 2px;
+}
+#randomButton{
+    background-color: #ff8100;
+    text-transform: uppercase;
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 2px;
+}
+#culturalButton{
+    background-color: #ff8100;
+    text-transform: uppercase;
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 2px;
+}
+.buttonicon{
+    height: 30px;
+    float: right;
+    margin-bottom: auto;
+    margin-top: 5px;
+}
+.buttontext{
+    width: 85%;
+    float: left;
+    padding-left: 55px;
 }
