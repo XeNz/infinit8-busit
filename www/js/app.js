@@ -5,7 +5,7 @@
 // the 2nd parameter is an array of 'requires'
 // 'starter.services' is found in services.js
 // 'starter.controllers' is found in controllers.js
-angular.module('starter', ['ionic', 'starter.controllers', 'starter.services'])
+angular.module('starter', ['ionic', 'starter.controllers', 'starter.services',])
 
 .run(function($ionicPlatform) {
   $ionicPlatform.ready(function() {
@@ -62,7 +62,7 @@ angular.module('starter', ['ionic', 'starter.controllers', 'starter.services'])
 
     //3
     .state('tab.challenges', {
-    url: '/challenges',
+    url: '/challenges/:categoryid',
     views: {
       'tab-challenges': {
         templateUrl: 'templates/tab-challenges.html',
@@ -70,18 +70,17 @@ angular.module('starter', ['ionic', 'starter.controllers', 'starter.services'])
       }
     }
   })
-
+    //3
     .state('tab.category', {
-    url: '/category/:categoryId',
+    url: '/category',
     views: {
       'tab-category': {
         templateUrl: 'templates/tab-category.html',
-        controller: function($scope, $stateParams){
-           $stateParams.categoryId;
-        }
+        controller: 'CategoryCtrl'
       }
     }
   })
+
 
 
   .state('tab.dash', {

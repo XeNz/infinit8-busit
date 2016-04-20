@@ -1,14 +1,18 @@
-<ion-view view-title="Challenges">
+<ion-view view-title="Challenge category1">
   <ion-content class="padding">
-<!--     <div class="bar bar-header bar-royal">
-      <h1 class="title">Welcome to challenge app</h1>
-    </div> -->
     <div class="row">
-       <div class="list">
-            <a ng-repeat="challenge in category" class="item">
-                {{category.id}}
-            </a>
-        </div>      
+      <div ng-controller="CategoryCtrl" class= "text-center" style="width: 100%">
+
+      <div id="challengelist">
+        <div ng-repeat="challenge in challenges" class="text-center" style="background-color: #ff8100">
+          <p> {{challenge.name}} </p>
+          <p> {{challenge.description}} </p>
+          <p> {{challenge.rewardDescription}} </p>
+          <p> {{challenge.reward}} </p>
+          
+        </div>
+        </div>
+      </div>  
     </div>
     </div>
   </ion-content>

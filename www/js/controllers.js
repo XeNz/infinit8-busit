@@ -13,8 +13,18 @@ angular.module('starter.controllers', [])
 .controller('RegistrationCtrl', ['$scope', '$stateParams', function ($scope,$stateParams) { 
 }])
 .controller('ChallengesCtrl', ['$scope', '$stateParams', function ($scope,$stateParams) { 
+  $scope.categoryid;
+
 }])
-.controller('CategoryCtrl', ['$scope', '$stateParams', function ($scope,$stateParams) { 
+.controller('CategoryCtrl', ['$scope', '$stateParams', function ($scope,$stateParams) {
+  
+    $scope.challenges = [
+    {"category1":[
+    {"name":"Shoot 3 darts", "description":"by The Irish Times Pub", "rewardDescription":"1 Free drink", "reward":"Score 100 points"},
+    {"name":"Drink with a complete stranger", "description":"by de Muze", "rewardDescription":"50% off", "reward":""},
+    {"name":"Shoot 3 darts", "description":"by The Irish Times Pub", "rewardDescription":"1 Free drink", "reward":"Score 100 points"}
+]}
+    ] 
 }])
 
 .run(['$rootScope', '$state', '$stateParams',
