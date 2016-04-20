@@ -61,7 +61,7 @@ angular.module('starter', ['ionic', 'starter.controllers', 'starter.services'])
   })
 
     //3
-        .state('tab.challenges', {
+    .state('tab.challenges', {
     url: '/challenges',
     views: {
       'tab-challenges': {
@@ -70,6 +70,19 @@ angular.module('starter', ['ionic', 'starter.controllers', 'starter.services'])
       }
     }
   })
+
+    .state('tab.category', {
+    url: '/category/:categoryId',
+    views: {
+      'tab-category': {
+        templateUrl: 'templates/tab-category.html',
+        controller: function($scope, $stateParams){
+           $stateParams.categoryId;
+        }
+      }
+    }
+  })
+
 
   .state('tab.dash', {
     url: '/dash',
@@ -80,35 +93,6 @@ angular.module('starter', ['ionic', 'starter.controllers', 'starter.services'])
       }
     }
   })
-
-  .state('tab.chats', {
-      url: '/chats',
-      views: {
-        'tab-chats': {
-          templateUrl: 'templates/tab-chats.html',
-          controller: 'ChatsCtrl'
-        }
-      }
-    })
-    .state('tab.chat-detail', {
-      url: '/chats/:chatId',
-      views: {
-        'tab-chats': {
-          templateUrl: 'templates/chat-detail.html',
-          controller: 'ChatDetailCtrl'
-        }
-      }
-    })
-
-  .state('tab.account', {
-    url: '/account',
-    views: {
-      'tab-account': {
-        templateUrl: 'templates/tab-account.html',
-        controller: 'AccountCtrl'
-      }
-    }
-  });
 
   // if none of the above states are matched, use this as the fallback
   $urlRouterProvider.otherwise('/tab/appstart');
