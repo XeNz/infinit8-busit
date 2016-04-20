@@ -1,13 +1,14 @@
 /* Empty. Add your own CSS if you like */
 .background, .background .pane, .background .item, .background .item-complex .item-content  {
-    background-color: rgb(207,0,57) ;
+    background-color: rgb(180,30,25) ;
 
 }
 .tabs-positive > .tabs{
-background-color: rgb(207,0,57) !important;
+background-color: rgb(180,30,25) !important;
 }
 .tabs{
-	background-color: rgb(207,0,57) !important;
+	background-color: rgb(180,30,25) !important;
+	display: none;
 }
 .icon, .tab-title{
 	
