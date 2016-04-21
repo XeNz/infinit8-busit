@@ -32,8 +32,15 @@ angular.module('starter.controllers', ['starter.services', 'ionic'])
 })
 
 .controller('ChallengeMapCtrl', function($scope, $stateParams, Challenges) {
-  $scope.challenge = Challenges.get($stateParams.challengeId);
-})
+    challenges =[{
+    "id":0,"name":"SHOOT 3 DARTS", "description":"by The Irish Times Pub",
+    "rewardDescription":"1 Free drink", "instructions":"1) Go to the Irish Time pub. 2) Talk to the barkeeper. 3) Shoot 3 Darts. 4) Score over 100. 5) Scan the QR code. 6)Enjoy your free drink.",
+    "image": "img/darts.png","lat":51.221241,"long":4.400419}];
+    //console.log(challenges[0].long);
+  $scope.challenge = challenges[0];
+
+  })
+
 
 
 .run(['$rootScope', '$state', '$stateParams',
@@ -46,8 +53,9 @@ angular.module('starter.controllers', ['starter.services', 'ionic'])
       function initialize() {
         $scope.challenge = Challenges.get($stateParams.challengeId);
 
-        var myLatlng = new google.maps.LatLng($scope.challenge.lat,$scope.challenge.long);
-        
+        //var myLatlng = new google.maps.LatLng($scope.challenge.lat,$scope.challenge.long);
+        var myLatlng = new google.maps.LatLng(51.221241,4.400419);
+
         var mapOptions = {
           center: myLatlng,
           zoom: 16,
@@ -76,8 +84,15 @@ angular.module('starter.controllers', ['starter.services', 'ionic'])
 
         $scope.map = map;
       }
-      //google.maps.event.addDomListener(window, 'load', initialize);
+
+
+      google.maps.event.addDomListener(window, 'load', initialize);
       ionic.Platform.ready(initialize);
+      $( document ).ready(function() {
+          console.log("kappa");
+          setTimeout(initialize(),2000);
+
+      });
       $scope.centerOnMe = function() {
         if(!$scope.map) {
           return;
@@ -99,5 +114,6 @@ angular.module('starter.controllers', ['starter.services', 'ionic'])
       $scope.clickTest = function() {
         alert('Example of infowindow with ng-click')
       };
+
       
     });

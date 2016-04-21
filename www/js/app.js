@@ -89,11 +89,11 @@ angular.module('starter', ['ionic', 'starter.controllers', 'starter.services',])
       }
     })
      .state('tab.challenge-map', {
-      url: '/challenges/:challengeId/',
+      url: '/challenges/:challengeId/map',
       views: {
         'tab-challenges': {
           templateUrl: 'templates/challenge-map.html',
-          controller: 'ChallengeDetailCtrl'
+          controller: 'ChallengeMapCtrl'
         }
       }
     })
