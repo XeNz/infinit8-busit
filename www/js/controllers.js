@@ -22,6 +22,8 @@ angular.module('starter.controllers', ['starter.services', 'ionic'])
   };
 })
 
+.controller('UnderconstructionCtrl', ['$scope', '$stateParams', function ($scope,$stateParams) { 
+}])
 
 
 
@@ -38,9 +40,11 @@ angular.module('starter.controllers', ['starter.services', 'ionic'])
     $rootScope.$stateParams = $stateParams;
 }])
 
-    .controller('MapCtrl', function($scope, $ionicLoading, $compile) {
+    .controller('MapCtrl', function($scope, $ionicLoading, $compile, Challenges,$stateParams) {
       function initialize() {
-        var myLatlng = new google.maps.LatLng(43.07493,-89.381388);
+        $scope.challenge = Challenges.get($stateParams.challengeId);
+
+        var myLatlng = new google.maps.LatLng($scope.challenge.lat,$scope.challenge.long);
         
         var mapOptions = {
           center: myLatlng,
@@ -61,7 +65,7 @@ angular.module('starter.controllers', ['starter.services', 'ionic'])
         var marker = new google.maps.Marker({
           position: myLatlng,
           map: map,
-          title: 'Uluru (Ayers Rock)'
+          title: 'The Irish Times Pub'
         });
 
         google.maps.event.addListener(marker, 'click', function() {

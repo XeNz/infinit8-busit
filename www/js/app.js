@@ -88,7 +88,15 @@ angular.module('starter', ['ionic', 'starter.controllers', 'starter.services',])
         }
       }
     })
-
+      .state('tab.underconstruction', {
+      url: '/underconstruction',
+      views: {
+        'tab-underconstruction': {
+          templateUrl: 'templates/tab-underconstruction.html',
+          controller: 'UnderconstructionCtrl'
+        }
+      }
+    })
 
 
   .state('tab.dash', {
