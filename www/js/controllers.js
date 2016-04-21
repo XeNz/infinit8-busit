@@ -1,4 +1,4 @@
-angular.module('starter.controllers', ['starter.services', 'ionic'])
+angular.module('starter.controllers', ['starter.services', 'ionic','ngCordova'])
 
 .controller('DashCtrl', function($scope) {})
 .controller('AppstartCtrl', function($scope) {
@@ -41,6 +41,31 @@ angular.module('starter.controllers', ['starter.services', 'ionic'])
 
   })
 
+.controller('ChallengeWonCtrl', function($scope, $stateParams, Challenges, $cordovaBarcodeScanner) {
+  $scope.challenge = Challenges.get($stateParams.challengeId);
+
+    document.addEventListener("deviceready", function () {
+      console.log('deviceread');
+    $cordovaBarcodeScanner
+      .scan()
+      .then(function(barcodeData) {
+        console.log("yes like this");
+      }, function(error) {
+        console.log("not like this");
+      });
+
+
+    // NOTE: encoding not functioning yet
+    $cordovaBarcodeScanner
+      .encode(BarcodeScanner.Encode.TEXT_TYPE, "http://www.nytimes.com")
+      .then(function(success) {
+        // Success!
+      }, function(error) {
+        // An error occurred
+      });
+
+  }, false);
+})
 
 
 .run(['$rootScope', '$state', '$stateParams',

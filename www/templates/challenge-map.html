@@ -9,13 +9,13 @@
   <ion-content class="padding">
   <div id="top">
 
-    <ion-content ng-controller="MapCtrl">
+    <ion-content ng-controller="MapCtrl" ng-init="initialize()">
           <div id="map" class="fullmap row" data-tap-disabled="true"></div>
     </ion-content>
     </div>
     <div id="mapbot">
-    <div class="row fullmap-buttons">
-      <a class="item text-center" ui-sref='tab.challenge-map'>
+    <div class="row fullmap-buttons center "style="margin-left: auto;margin-right: auto;">
+      <a class="item text-center" ui-sref='tab.challenge-won'>
         <button class="button continueButton text-center" style="color: #fff; text-transform: uppercase;">
         I won!!
         </button>
