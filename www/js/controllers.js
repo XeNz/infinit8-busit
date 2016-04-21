@@ -95,6 +95,7 @@ angular.module('starter.controllers', ['starter.services', 'ionic','ngCordova'])
 }])
 
     .controller('MapCtrl', function($scope, $ionicLoading, $compile, Challenges,$stateParams) {
+
       function initialize() {
         $scope.challenge = Challenges.get($stateParams.challengeId);
 
@@ -128,16 +129,18 @@ angular.module('starter.controllers', ['starter.services', 'ionic','ngCordova'])
         });
 
         $scope.map = map;
+        google.maps.event.trigger( map, 'resize' );
+                $scope.$on( "$ionicView.enter", function( scopes, states ) {
+           google.maps.event.trigger( map, 'resize' );
+        });
       }
 
 
-      google.maps.event.addDomListener(window, 'load', initialize);
+      //google.maps.event.addDomListener(window, 'load', initialize);
       ionic.Platform.ready(initialize);
-      $( document ).ready(function() {
-          console.log("kappa");
-          setTimeout(initialize(),2000);
-
-      });
+              $scope.$on( "$ionicView.enter", function( scopes, states ) {
+           google.maps.event.trigger( map, 'resize' );
+        });
       $scope.centerOnMe = function() {
         if(!$scope.map) {
           return;
@@ -159,6 +162,5 @@ angular.module('starter.controllers', ['starter.services', 'ionic','ngCordova'])
       $scope.clickTest = function() {
         alert('Example of infowindow with ng-click')
       };
-
       
     });
