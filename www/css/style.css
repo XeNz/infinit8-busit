@@ -5,7 +5,7 @@ background-color: rgb(180,30,25) !important;
 }
 .tabs{
 	background-color: rgb(180,30,25) !important;
-	display: none;
+	/*display: none;*/
 }
 .icon, .tab-title{
 	
@@ -110,8 +110,8 @@ background-color: rgb(180,30,25) !important;
 .fullmap-buttons{
     padding-top:130%;
 }
-/*
-.center{
+
+.centerimages{
   display: -webkit-box;
     display: -moz-box;
     display: -ms-flexbox;
@@ -141,4 +141,9 @@ background-color: rgb(180,30,25) !important;
     -ms-flex-align: center;
     align-items: center;
 }
-*/
+.hidden{
+    display: none;
+}
+.tabs-striped .tabs{
+    border-bottom: none;
+}

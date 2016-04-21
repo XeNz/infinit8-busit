@@ -115,7 +115,24 @@ angular.module('starter', ['ionic', 'starter.controllers', 'starter.services',])
         }
       }
     })
-
+    .state('tab.achievements', {
+      url: '/achievements',
+      views: {
+        'tab-achievements': {
+          templateUrl: 'templates/tab-achievements.html',
+          controller: 'AchievementsCtrl'
+        }
+      }
+    })
+    .state('tab.splashscreen', {
+      url: '/splashscreen',
+      views: {
+        'tab-splashscreen': {
+          templateUrl: 'templates/tab-splashscreen.html',
+          controller: 'SplashscreenCtrl'
+        }
+      }
+    })
 
   .state('tab.dash', {
     url: '/dash',
@@ -128,6 +145,6 @@ angular.module('starter', ['ionic', 'starter.controllers', 'starter.services',])
   })
 
   // if none of the above states are matched, use this as the fallback
-  $urlRouterProvider.otherwise('/tab/appstart');
+  $urlRouterProvider.otherwise('/tab/splashscreen');
 
 });

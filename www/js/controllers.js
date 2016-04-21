@@ -10,6 +10,10 @@ angular.module('starter.controllers', ['starter.services', 'ionic','ngCordova'])
     });
   
 })
+.controller('SplashscreenCtrl', function($scope,$state,$stateParams) {
+   
+  setTimeout(function(){ $state.go('tab.appstart'); }, 2000);
+})
 .controller('RegistrationCtrl', ['$scope', '$stateParams', function ($scope,$stateParams) { 
 }])
 .controller('ChallengetypesCtrl', ['$scope', '$stateParams', function ($scope,$stateParams) { 
@@ -17,9 +21,16 @@ angular.module('starter.controllers', ['starter.services', 'ionic','ngCordova'])
 
 .controller('ChallengeCtrl', function($scope, Challenges) {
   $scope.challenges = Challenges.all();
+  ionic.Platform.ready(function(){
+    $scope.challenges = Challenges.all();
+  })
+
   $scope.remove = function(challenge) {
     Challenges.remove(challenge);
   };
+    $scope.$on('$ionicView.beforeEnter', function (event, viewData) {
+  viewData.enableBack = true;
+}); 
 })
 
 .controller('UnderconstructionCtrl', ['$scope', '$stateParams', function ($scope,$stateParams) { 
@@ -67,6 +78,15 @@ angular.module('starter.controllers', ['starter.services', 'ionic','ngCordova'])
   }, false);
 })
 
+.controller('AchievementsCtrl', ['$scope', '$stateParams', function ($scope,$stateParams,$ionicHistory) {
+  $scope.myGoBack = function() {
+    $ionicHistory.goBack();
+  };
+  $scope.$on('$ionicView.beforeEnter', function (event, viewData) {
+  viewData.enableBack = true;
+}); 
+ 
+}])
 
 .run(['$rootScope', '$state', '$stateParams',
   function ($rootScope, $state, $stateParams) {
