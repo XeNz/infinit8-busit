@@ -93,9 +93,10 @@ background-color: rgb(180,30,25) !important;
     background-color: rgb(180,30,25) ;
 
 }
-#map {
+#map {  
+  margin-top: 20%;
   width: 100%;
-  height: 50%;
+  height: 100%;
 }
 
 .scroll {

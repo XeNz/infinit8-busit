@@ -24,14 +24,15 @@
     </p>
   </div>
   <div id="bottom">
+
+    <ion-content ng-controller="MapCtrl">
+          <div id="map" data-tap-disabled="true"></div>
+    </ion-content>
     <a class="item text-center" ui-sref='tab.acceptchallenge'>
       <button class="button continueButton text-center" style="color: #fff; text-transform: uppercase;">
       Accept challenge
       </button>
     </a>
-    <ion-content ng-controller="MapCtrl">
-          <div id="map" data-tap-disabled="true"></div>
-    </ion-content>
   </div>
 
 

@@ -70,8 +70,8 @@ angular.module('starter.controllers', ['starter.services', 'ionic'])
 
         $scope.map = map;
       }
-      google.maps.event.addDomListener(window, 'load', initialize);
-      
+      //google.maps.event.addDomListener(window, 'load', initialize);
+      ionic.Platform.ready(initialize);
       $scope.centerOnMe = function() {
         if(!$scope.map) {
           return;
