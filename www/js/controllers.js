@@ -31,7 +31,9 @@ angular.module('starter.controllers', ['starter.services', 'ionic'])
   $scope.challenge = Challenges.get($stateParams.challengeId);
 })
 
-
+.controller('ChallengeMapCtrl', function($scope, $stateParams, Challenges) {
+  $scope.challenge = Challenges.get($stateParams.challengeId);
+})
 
 
 .run(['$rootScope', '$state', '$stateParams',

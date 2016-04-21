@@ -88,6 +88,15 @@ angular.module('starter', ['ionic', 'starter.controllers', 'starter.services',])
         }
       }
     })
+     .state('tab.challenge-map', {
+      url: '/challenges/:challengeId/',
+      views: {
+        'tab-challenges': {
+          templateUrl: 'templates/challenge-map.html',
+          controller: 'ChallengeDetailCtrl'
+        }
+      }
+    })
       .state('tab.underconstruction', {
       url: '/underconstruction',
       views: {
